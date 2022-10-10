@@ -1,10 +1,8 @@
 # Small program to help with testing objects being drawn in pygame framework
-# 1 - Import packages
 import pygame
 from pygame.locals import *
 import sys
 
-# 2 - Define constants
 WINDOW_WIDTH = 640
 WINDOW_HEIGHT = 480
 FRAMES_PER_SECOND = 30
@@ -18,28 +16,17 @@ YELLOW = (255, 255, 0)
 TEAL = (0, 255, 255)
 PURPLE = (255, 0, 255)
 
-# 3 - Initialize the world
 pygame.init()
 window = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
 clock = pygame.time.Clock()
 
-# 4 - Load assets: image(s), sound(s),  etc.
-
-# 5 - Initialize variables
-
-# 6 - Loop forever
 while True:
-
-    # 7 - Check for and handle events
     for event in pygame.event.get():
         # Clicked the close button? Quit pygame and end the program
         if event.type == pygame.QUIT:
             pygame.quit()
             sys.exit()
 
-    # 8 - Do any "per frame" actions
-
-    # 9 - Clear the window
     window.fill(BLACK)
 
     # 10 - Draw all window elements
@@ -54,7 +41,7 @@ while True:
 #    pygame.draw.line(window, BLUE, (20, 60), (60, 20), 1)
 
     # Draw a filled circle and an empty circle
-    pygame.draw.circle(window, WHITE, (250, 50), 30, 0)  # filled
+    pygame.draw.circle(window, WHITE, (250, 50), 1, 0)  # filled
 #    pygame.draw.circle(window, GREEN, (400, 50), 30, 2)  # 2 pixel edge
 
     # Draw a filled rectangle and an empty rectangle
@@ -79,7 +66,5 @@ while True:
 #                        ((580, 400), (587, 450),
 #                         (595, 460), (600, 444)), 1)
 
-    # 11 - Update the window
     pygame.display.update()
-    # 12 - Slow things down a bit
     clock.tick(FRAMES_PER_SECOND)  # make pygame wait
