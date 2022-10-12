@@ -3,8 +3,8 @@ import pygame
 from pygame.locals import *
 import sys
 
-WINDOW_WIDTH = 640
-WINDOW_HEIGHT = 480
+WINDOW_WIDTH = 1500
+WINDOW_HEIGHT = 1000
 FRAMES_PER_SECOND = 30
 GRAY = (230, 230, 230)
 BLACK = (0, 0, 0)
@@ -29,6 +29,17 @@ while True:
 
     window.fill(BLACK)
 
+#    standard window parameters
+    pygame.draw.line(window, GRAY, (0, 500), (1500, 500), 1)
+    pygame.draw.line(window, GRAY, (750, 0), (750, 1000), 1)
+    font = pygame.font.SysFont(None, 24)
+    img = font.render('X=0/Y=500', True, GRAY)
+    window.blit(img, (0, 500))
+    img = font.render('X=750/Y=500', True, GRAY)
+    window.blit(img, (750, 500))
+
+  
+
     # 10 - Draw all window elements
     # Draw a box
 #    pygame.draw.line(window, BLUE, (20, 20), (60, 20), 4)  # top
@@ -41,7 +52,6 @@ while True:
 #    pygame.draw.line(window, BLUE, (20, 60), (60, 20), 1)
 
     # Draw a filled circle and an empty circle
-    pygame.draw.circle(window, WHITE, (250, 50), 1, 0)  # filled
 #    pygame.draw.circle(window, GREEN, (400, 50), 30, 2)  # 2 pixel edge
 
     # Draw a filled rectangle and an empty rectangle
