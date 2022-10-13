@@ -37,8 +37,12 @@ while True:
     window.blit(img, (0, 500))
     img = font.render('X=750/Y=500', True, GRAY)
     window.blit(img, (750, 500))
-
-  
+    img = font.render('X=1500/Y=500', True, GRAY)
+    window.blit(img, (1390, 500))
+    img = font.render('X=750/Y=0', True, GRAY)
+    window.blit(img, (750, 9))
+    img = font.render('X=750/Y=1000', True, GRAY)
+    window.blit(img, (750, 980))
 
     # 10 - Draw all window elements
     # Draw a box
