@@ -80,5 +80,16 @@ while True:
 #                        ((580, 400), (587, 450),
 #                         (595, 460), (600, 444)), 1)
 
+    ev = pygame.event.get()
+
+    if event.type == pygame.MOUSEBUTTONUP:
+        x, y = pygame.mouse.get_pos()
+
+        img = font.render('X =' + str(x), True, GREEN)
+        window.blit(img, (x+10, y+10))
+
+        img = font.render('Y =' + str(y), True, GREEN)
+        window.blit(img, (x+25, y+25))
+
     pygame.display.update()
     clock.tick(FRAMES_PER_SECOND)  # make pygame wait
