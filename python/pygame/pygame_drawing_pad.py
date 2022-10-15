@@ -75,10 +75,10 @@ while True:
 #    pygame.draw.arc(window, BLUE, (20, 400, 100, 100), 0, 2, 5)
 
     # Draw anti-aliased lines: a single line, then a list of points
-    pygame.draw.aaline(window, RED, (500, 400),  (540, 470), 1)
-    pygame.draw.aalines(window, BLUE, True,
-                        ((580, 400), (587, 450),
-                         (595, 460), (600, 444)), 1)
+ #   pygame.draw.aaline(window, RED, (500, 400),  (540, 470), 1)
+ #   pygame.draw.aalines(window, BLUE, True,
+ #                       ((580, 400), (587, 450),
+ #                        (595, 460), (600, 444)), 1)
 
     ev = pygame.event.get()
 
@@ -88,7 +88,7 @@ while True:
         img = font.render('X =' + str(x), True, GREEN)
         window.blit(img, (x+10, y+10))
 
-        img = font.render('Y =' + str(y), True, GREEN)
+        img = font.render('Y =' + str(y), True, TEAL)
         window.blit(img, (x+25, y+25))
 
     pygame.display.update()
