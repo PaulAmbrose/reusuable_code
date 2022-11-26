@@ -8,10 +8,10 @@ config = {
     'author': 'Paul Ambrose',
     'url': 'URL to get at it',
     'download_url': 'where to download it',
-    'author_email': 'pablo_rose34@hotmail.com'
+    'author_email': 'pablo_rose34@hotmail.com',
     'version': '0.1',
     'install_requires': 'module names',
-    'packages': '['NAME']',
+    'packages': '[NAME]',
     'scripts': 'projectname'
 
 }
